@@ -1,0 +1,27 @@
+
+// додають задачі в проект і тим самим розширяють його можливості
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+// вказується версія java для проекту
+sourceCompatibility = 1.8
+
+// блок reposetories означає, що збірка повинна дозволяти залежності з Maven Central репозиторію
+repositories {
+    mavenCentral()
+}
+
+//переоприділяємо таск test, який запускає тести
+test {
+    ignoreFailures = true;
+}
+
+//compile - означає доступність бібліотеки під час компіляції
+//testCompile - означає залежності, які використовуються для компіляції та запуску тестів, але не потрібні для компіляції та запуску коду проекту
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
