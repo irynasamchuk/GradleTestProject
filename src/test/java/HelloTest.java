@@ -15,6 +15,6 @@ public class HelloTest {
     @Test
     public void sayHelloFromPerson(){
         String greeting = hello.sayHello("Ira");
-        assertEquals("The name is not same", greeting, ("Hello Ira !"));
+        assertEquals("The name is not same", greeting, ("Hello Ira"));
     }
 }
